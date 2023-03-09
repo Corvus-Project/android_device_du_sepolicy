@@ -13,3 +13,6 @@ hal_client_domain(system_server, hal_lineage_powershare)
 allow system_server pocket_service:service_manager { add find };
 allow system_server pocket_judge_sysfs:dir search;
 allow system_server pocket_judge_sysfs:file rw_file_perms;
+
+# Let system server find fake-D2D backup property
+get_prop(system_server, backup_d2d_prop)
